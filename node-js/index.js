@@ -7,7 +7,7 @@ const myServer = http.createServer((req,resp)=>{
 
     // console.log(req);
     // const log = `${Date.now()}:New Req Recived\n`;
-    const log = `${Date.now()}: ${req.url} New Req Recived\n`;
+    const log = `${Date.now()}: ${req.method} ${req.url} New Req Recived\n`;
     const myUrl=url.parse(req.url,true);
     console.log(myUrl);
     // fs.appendFile(`log.txt`,log,(err,date)=> {
@@ -26,7 +26,12 @@ const myServer = http.createServer((req,resp)=>{
             case '/search':
                 const search= myUrl.query.search_query;
                 resp.end("Here are your result for " + search);
-
+            case '/signup':
+                if(req.method==="GET")resp.end("This is a signup Form ");
+                else if(req.method === "POST"){
+                    // DB Query
+                    resp.end("Success");
+                }
             default:
                 resp.end("404 Not Found!!!")
 
