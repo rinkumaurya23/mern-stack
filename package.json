@@ -1,0 +1,12 @@
+{
+  "name": "mern-stack",
+  "version": "1.0.0",
+  "description": "MERN is an acronym for the four technologies that form the stack: MongoDB, Express, React, and Node. js. Developers recognize the MERN stack as a simplified development platform for building highly scalable and interactive web applications.",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node hello.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
